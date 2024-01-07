@@ -3,6 +3,9 @@
 > [!NOTE]
 > Mainly used for the LabyMod Client (cosmetics, emotes and various other essentials)
 
+> [!WARNING]
+> Make sure to always use dashed UUIDv4's ({8-4-4-4-16}), as many endpoints fail when inputting UUIDv4s without dashes,
+
 ## Addons (LabyMod 3)
 **Description:** This returns addons and their details from the LabyMod 3 addon store.
 
@@ -21,8 +24,8 @@ GET /addons.json
         "Graphics"
     ],
     "addons": {
-        "18": [
-            { // 1.8.9
+        "18": [ // 1.8.9
+            {
                 "name": "StreamChat+",
                 "uuid": "c7f7055f-443c-4160-8714-a172ab8f74b5",
                 "version": "6",
@@ -190,16 +193,13 @@ GET /server_groups.json
 }
 ```
 
-## Player UUID to LabyMod User Data 
-**Subdomain:** `https://dl.labymod.net/`
-
-**Endpoint:** `GET /userdata/:dashed_uuid.json`
+## Player UUID to LabyMod User Data
 
 **Description:** This returns LabyMod user data such as cosmetics, groups, and user role.
 
 **Request:**
 ```http
-GET /userdata/34e57efa-5783-46c7-a9fc-890296aaba1f.json
+GET /userdata/:uuid.json
 ```
 
 **Response:**
@@ -239,6 +239,9 @@ GET /userdata/34e57efa-5783-46c7-a9fc-890296aaba1f.json
     ]
 }
 ```
+
+
+# TODO:
 
 - https://dl.labymod.net/whitelist.bin
 - https://dl.labymod.net/emotes/emotedata
