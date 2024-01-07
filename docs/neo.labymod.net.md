@@ -1,0 +1,1 @@
+https://neo.labymod.net/emotes/index.json
