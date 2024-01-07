@@ -5,9 +5,9 @@ for (const cosmetic of Object.values(rawCosmetics.cosmetics)) {
         id: cosmetic.id,
         type: cosmetic.type,
         name: cosmetic.name,
-        default_images: (cosmetic.default_data || []).filter(d => d.length === 36).map(d => `https://dl.labymod.net/textures/${cosmetic.id}/${d}`),
+        default_images: (cosmetic.default_data || []).filter(d => d.length === 36).map(d => `https://proxy.ebio.gg/url?v=https://dl.labymod.net/textures/${cosmetic.id}/${d}`),
         category: cosmetic.category,
-        image: `https://www.labymod.net/page/tpl/assets/images/shop/products/${cosmetic.name.toLowerCase().replaceAll(" ", "-")}_0.png`
+        image: `https://www.labymod.net/images/products/${cosmetic.name.toLowerCase().replaceAll(" ", "-")}_0.png`
     });
 }
 
@@ -16,4 +16,4 @@ let markdownTable = "| ID | Type | Name | Category | Image | Default Images |\n|
 for (const cosmetic of cosmetics)
     markdownTable += `| ${cosmetic.id} | ${cosmetic.type} | ${cosmetic.name} | ${cosmetic.category} | ![${cosmetic.name}](${cosmetic.image}) | ${cosmetic.default_images.map(d => `![${cosmetic.name}](${d})`).join(" ")} |\n`;
 
-console.log(markdownTable);
+Bun.write("docs/extra/cosmetics.md", markdownTable);
