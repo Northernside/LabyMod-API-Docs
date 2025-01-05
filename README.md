@@ -21,3 +21,4 @@
 - [Diplomatic](https://github.com/Diplomatic) (Extended the docs with more details and endpoints)
 - [LabyStudio](https://github.com/LabyStudio) (Mister LabyMod himself)
 - [Northernside](https://github.com/Northernside) (dawg, laby.net and flintmc.net nerd (touch grass pls), full coverage of dl.labymod.net)
+- [EinsJustin](https://github.com/EinsJustinn) (a part of flintmc.net)
